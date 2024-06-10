@@ -1,11 +1,23 @@
 # Sample AWS practice
 
-Welcome to my AWS & Typescript practice repository! This repository contains all the AWS & Typescript code I practiced from the comprehensive course on [AWS & Typescript Masterclass - CDK, Serverless, React
+Welcome to my AWS & Typescript practice repository! This repository contains all the code I practiced from the comprehensive course on [AWS & Typescript Masterclass - CDK, Serverless, React
 ](https://www.udemy.com/course/aws-typescript-cdk-serverless-react) and other sources. 
 
 Certificate no: X
 
-## Projects
+## Notes / Projects
 * [X](x)
+
+## Course Overview
+
+Learn to build and manage serverless projects using AWS and Typescript. This course covers:
+- **Infrastructure as Code**: Use AWS CDK for managing CloudFormation stacks.
+- **Serverless Computing**: Build APIs with Lambda, API Gateway, DynamoDB, and S3.
+- **CI/CD Pipelines**: Implement pipelines with AWS CodePipeline.
+- **Advanced CDK Topics**: Explore intermediate features and CDK code testing.
+- **Typescript Programming**: Utilize Typescript for cloud infrastructure, business logic, and web UI development.
+- **User Authentication**: Manage multi-tenant apps with AWS Cognito and Amplify.
+- **Monitoring and IAM**: Use AWS IAM for access control and CloudWatch for monitoring.
+
 
 Happy coding!
