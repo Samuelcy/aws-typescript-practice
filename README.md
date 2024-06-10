@@ -9,8 +9,7 @@ Certificate no: X
 * [X](x)
 
 ## Course Overview
-
-Learn to build and manage serverless projects using AWS and Typescript. This course covers:
+Learn to build and manage serverless projects using AWS and Typescript:
 - **Infrastructure as Code**: Use AWS CDK for managing CloudFormation stacks.
 - **Serverless Computing**: Build APIs with Lambda, API Gateway, DynamoDB, and S3.
 - **CI/CD Pipelines**: Implement pipelines with AWS CodePipeline.
