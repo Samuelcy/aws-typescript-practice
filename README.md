@@ -6,6 +6,9 @@ Welcome to my AWS & Typescript practice repository! This repository contains all
 Certificate no: X
 
 ## Notes / Projects
+* [AWS CDK and CloufFormation intro]([ttps://github.com/Samuelcy/aws-typescript-practice/tree/main/01-aws-cdk-cloud-formation-intro))
+* [X](x)
+* [X](x)
 * [X](x)
 
 ## Course Overview
