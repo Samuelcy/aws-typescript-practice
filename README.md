@@ -6,5 +6,6 @@ Welcome to my AWS & Typescript practice repository! This repository contains all
 Certificate no: X
 
 ## Projects
+* [X](x)
 
 Happy coding!
