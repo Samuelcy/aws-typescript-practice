@@ -23,3 +23,6 @@ Content-Type: application/json
     "location": "Paris3"
 }
 ###
+
+DELETE https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
+###
