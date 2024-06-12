@@ -7,21 +7,22 @@ POST https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces
 Content-Type: application/json
 
 {
-    "location": "Paris2"
+     "location": "Dublin POST",
+    "name": "Best location"
 }
 ###
 
-GET https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
+GET https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=e0f8d09c-e1d2-4e2a-83fc-23597f68c9db
 
 ###
 
 
-PUT https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
+PUT https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=e0f8d09c-e1d2-4e2a-83fc-23597f68c9db
 Content-Type: application/json
 
-{
-    "location": "Paris3"
-}
+ {
+    "name": "Not Best location"
+ }
 ###
 
 DELETE https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
