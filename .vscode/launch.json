@@ -10,7 +10,7 @@
            "name": "Debug local file",
            "runtimeArgs": [
             "-r",
-            "ts-node/regikster"
+            "ts-node/register"
            ],
            "args": [
             "${relativeFile}"

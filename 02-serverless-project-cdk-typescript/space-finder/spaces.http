@@ -11,6 +11,15 @@ Content-Type: application/json
 }
 ###
 
-GET https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=
+GET https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
 
+###
+
+
+PUT https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=123
+Content-Type: application/json
+
+{
+    "location": "Paris3"
+}
 ###
