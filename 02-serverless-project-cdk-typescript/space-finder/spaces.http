@@ -9,5 +9,8 @@ Content-Type: application/json
 {
     "location": "Paris2"
 }
+###
+
+GET https://c7giihbfue.execute-api.us-west-1.amazonaws.com/prod/spaces?id=
 
 ###
