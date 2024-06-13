@@ -6,18 +6,9 @@ Welcome to my AWS & Typescript practice repository! This repository contains all
 Certificate no: X
 
 ## Notes / Projects
-* [AWS CDK and CloudFormation intro](https://github.com/Samuelcy/aws-typescript-practice/tree/main/01-aws-cdk-cloud-formation-intro)
-* [AWS CDK - intermediate topics](x)
-* [Serverless project with CDK and Typescript](x)
-* [Serverless: AWS Lambda - bundling, testing and debugging ](x)
-* [AWS DynamoDb with CDK and Lambda](x)
-* [Securing APIs with AWS Cognito](x)
-* [AWS Cognito identity pools](x)
-* [UI - general topics](x)
-* [Using AWS inside a React project with Amplify](x)
-* [Monitoring with CloudWatch](x)
-* [AWS-SDK and CDK testing](x)
-* [CI / CD with CodePipeline](x)
+* [AWS CDK and CloudFormation intro](https://github.com/Samuelcy/aws-typescript-practice/tree/main/01-aws-cdk-cloud-formation-intro/cdk-starter)
+* [Space Finder AWS CDK Project Front-End](https://github.com/Samuelcy/aws-typescript-practice/tree/main/02-aws-cdk-typescript-project/space-finder-frontend)
+* [Space Finder AWS CDK Project Back-End](https://github.com/Samuelcy/aws-typescript-practice/tree/main/02-aws-cdk-typescript-project/space-finder)
 
 ## Course Overview
 Learn to build and manage serverless projects using AWS and Typescript:
