@@ -1,4 +1,4 @@
-# AWS practice
+# AWS Typescript Practice
 
 Welcome to my AWS & Typescript practice repository! This repository contains all the code I practiced from the comprehensive course on [AWS & Typescript Masterclass - CDK, Serverless, React
 ](https://www.udemy.com/course/aws-typescript-cdk-serverless-react) and other sources. 
