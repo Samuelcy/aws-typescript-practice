@@ -1,15 +1,15 @@
-import { fetchAuthSession } from '@aws-amplify/auth';
-import { AuthService } from './AuthService';
- 
-async function testAuth() {
-  const service = new AuthService();
-  await service.login('barosanu', 'Barosanu1!');
- 
-  const { idToken } = (await fetchAuthSession()).tokens ?? {};
+import { AuthService } from "./AuthService";
 
-  console.log(idToken?.toString());
- 
-  return idToken;
+async function testAuth(){
+    const service = new AuthService();
+    const loginResult = await service.login(
+        'barosanu',
+        'Barosanu1!'
+    )
+
+    // console.log(loginResult.getSignInUserSession().getIdToken().getJwtToken());
+    const credentials = await service.generateTemporaryCredentials(loginResult);
+    console.log(credentials);
 }
- 
+
 testAuth();
