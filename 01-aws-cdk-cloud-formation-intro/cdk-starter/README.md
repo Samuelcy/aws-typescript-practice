@@ -1,4 +1,4 @@
-# CDK TypeScript project
+# Basic CDK TypeScript project
 
 This is a starter project for CDK development with TypeScript.
 
