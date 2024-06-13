@@ -1,14 +1,14 @@
 {
+  "DataStack": {
+    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpaceTable-06c1b170b487",
+    "SpaceFinderPhotosBucketName": "space-finder-photos-06c1b170b487",
+    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:us-west-1:058264186876:table/SpaceTable-06c1b170b487"
+  },
   "AuthStack": {
     "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:us-west-1:058264186876:userpool/us-west-1_1ScBVnE4K",
     "SpaceUserPoolId": "us-west-1_1ScBVnE4K",
     "SpaceUserPoolClientId": "17qqf57tb3iqv5n00pjg2jtdgs",
     "SpaceIdentityPoolId": "us-west-1:9f943453-ef9e-4d87-b782-9dcbb5d731a1"
-  },
-  "DataStack": {
-    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpaceTable-06c1b170b487",
-    "SpaceFinderPhotosBucketName": "space-finder-photos-06c1b170b487",
-    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:us-west-1:058264186876:table/SpaceTable-06c1b170b487"
   },
   "UiDeploymentStack": {
     "SpaceFInderUrl": "d14l750cw1y1dq.cloudfront.net"
