@@ -20,7 +20,7 @@ Amplify.configure({
 export class AuthService {
 
     private user: CognitoUser | undefined;
-    private jwtToken: string | undefined;
+    public jwtToken: string | undefined;
     private temporaryCredentials: object | undefined;
 
 
@@ -35,7 +35,7 @@ export class AuthService {
         }
     }
 
-    public async getTemporaryCredentials() {
+    public async getTemporaryCredentials(){
         if (this.temporaryCredentials) {
             return this.temporaryCredentials;
         }
