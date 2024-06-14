@@ -4,8 +4,11 @@ import NavBar from './components/NavBar';
 import { useState } from 'react';
 import LoginComponent from './components/LoginComponent';
 import { AuthService } from './services/AuthService';
+import { DataService } from './services/DataService';
+import CreateSpace from './components/spaces/CreateSpace';
 
 const authService = new AuthService();
+const dataService = new DataService();
 
 function App() {
   const [userName, setUserName] = useState<string | undefined>(undefined);
@@ -25,14 +28,15 @@ function App() {
         },
         {
           path: "/login",
-          element: <LoginComponent authService={authService} setUserNameCb={setUserName}/>,        },
+          element: <LoginComponent authService={authService} setUserNameCb={setUserName}/>,
+        },
         {
           path: "/profile",
           element: <div>Profile page</div>,
         },
         {
           path: "/createSpace",
-          element: <div>Create space page</div>,
+          element: <CreateSpace dataService={dataService}/>,
         },
         {
           path: "/spaces",
