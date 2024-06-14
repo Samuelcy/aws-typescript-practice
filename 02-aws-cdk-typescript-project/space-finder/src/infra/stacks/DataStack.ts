@@ -1,8 +1,9 @@
 import { CfnOutput, Stack, StackProps } from 'aws-cdk-lib'
 import { AttributeType, ITable, Table } from 'aws-cdk-lib/aws-dynamodb';
-import { Construct } from 'constructs'
+import { Construct } from 'constructs';
 import { getSuffixFromStack } from '../Util';
-import { Bucket, HttpMethods, IBucket, ObjectOwnership } from 'aws-cdk-lib/aws-s3';
+import { Bucket, BucketAccessControl, HttpMethods, IBucket, ObjectOwnership } from 'aws-cdk-lib/aws-s3';
+
 
 export class DataStack extends Stack {
 
@@ -15,6 +16,11 @@ export class DataStack extends Stack {
 
         const suffix = getSuffixFromStack(this);
 
+        this.deploymentBucket = new Bucket(this, 'SpaceFinderFrontend', {
+            bucketName: `space-finder-frontend-${suffix}`,
+            // publicReadAccess: true,
+            websiteIndexDocument: 'index.html'
+        })
         this.photosBucket = new Bucket(this, 'SpaceFinderPhotos', {
             bucketName: `space-finder-photos-${suffix}`,
             cors: [{
@@ -26,13 +32,13 @@ export class DataStack extends Stack {
                 allowedOrigins: ['*'],
                 allowedHeaders: ['*']
             }],
-            // accessControl: BucketAccessControl.PUBLIC_READ, // currently not working,
+            // accessControl: BucketAccessControl.PUBLIC_READ,
             objectOwnership: ObjectOwnership.OBJECT_WRITER,
             blockPublicAccess: {
                 blockPublicAcls: false,
                 blockPublicPolicy: false,
                 ignorePublicAcls: false,
-                restrictPublicBuckets: false
+                restrictPublicBuckets: false,
             }
         });
         new CfnOutput(this, 'SpaceFinderPhotosBucketName', {

@@ -1,10 +1,15 @@
 import { CfnOutput, Stack, StackProps } from 'aws-cdk-lib'
 import { CfnIdentityPool, CfnIdentityPoolRoleAttachment, CfnUserPoolGroup, UserPool, UserPoolClient } from 'aws-cdk-lib/aws-cognito';
+import { CfnUserGroup } from 'aws-cdk-lib/aws-elasticache';
 import { Effect, FederatedPrincipal, PolicyStatement, Role } from 'aws-cdk-lib/aws-iam';
+import { IBucket } from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
-export class AuthStack extends Stack {
+interface AuthStackProps extends StackProps {
+    photosBucket: IBucket
+}
 
+export class AuthStack extends Stack {
     public userPool: UserPool;
     private userPoolClient: UserPoolClient;
     private identityPool: CfnIdentityPool;
@@ -12,12 +17,13 @@ export class AuthStack extends Stack {
     private unAuthenticatedRole: Role;
     private adminRole: Role;
 
-    constructor(scope: Construct, id: string, props?: StackProps) {
+    constructor(scope: Construct, id: string, props: AuthStackProps) {
         super(scope, id, props);
+
         this.createUserPool();
         this.createUserPoolClient();
         this.createIdentityPool();
-        this.createRoles();
+        this.createRoles(props.photosBucket);
         this.attachRoles();
         this.createAdminsGroup();
     }
@@ -35,7 +41,6 @@ export class AuthStack extends Stack {
             value: this.userPool.userPoolId
         })
     }
-
     private createUserPoolClient() {
         this.userPoolClient = this.userPool.addClient('SpaceUserPoolClient', {
             authFlows: {
@@ -45,7 +50,6 @@ export class AuthStack extends Stack {
                 userSrp: true
             }
         });
-
         new CfnOutput(this, 'SpaceUserPoolClientId', {
             value: this.userPoolClient.userPoolClientId
         })
@@ -67,13 +71,11 @@ export class AuthStack extends Stack {
                 providerName: this.userPool.userPoolProviderName
             }]
         })
-
         new CfnOutput(this, 'SpaceIdentityPoolId', {
             value: this.identityPool.ref
         })
     }
-
-    private createRoles() {
+    private createRoles(photosBucket: IBucket) {
         this.authenticatedRole = new Role(this, 'CognitoDefaultAuthenticatedRole', {
             assumedBy: new FederatedPrincipal('cognito-identity.amazonaws.com', {
                 StringEquals: {
@@ -86,7 +88,6 @@ export class AuthStack extends Stack {
                 'sts:AssumeRoleWithWebIdentity'
             )
         });
-
         this.unAuthenticatedRole = new Role(this, 'CognitoDefaultUnauthenticatedRole', {
             assumedBy: new FederatedPrincipal('cognito-identity.amazonaws.com', {
                 StringEquals: {
@@ -99,7 +100,6 @@ export class AuthStack extends Stack {
                 'sts:AssumeRoleWithWebIdentity'
             )
         });
-
         this.adminRole = new Role(this, 'CognitoAdminRole', {
             assumedBy: new FederatedPrincipal('cognito-identity.amazonaws.com', {
                 StringEquals: {
@@ -112,13 +112,13 @@ export class AuthStack extends Stack {
                 'sts:AssumeRoleWithWebIdentity'
             )
         });
-
         this.adminRole.addToPolicy(new PolicyStatement({
             effect: Effect.ALLOW,
             actions: [
-                's3:ListAllMyBuckets'
+                's3:PutObject',
+                's3:PutObjectAcl'
             ],
-            resources: ['*']
+            resources: [photosBucket.bucketArn + '/*']
         }))
     }
 
