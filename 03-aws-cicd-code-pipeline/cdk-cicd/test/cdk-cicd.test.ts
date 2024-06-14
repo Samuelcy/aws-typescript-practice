@@ -1,4 +1,3 @@
-
-test('Initial Test, () => {
+test('initial test', () => {
 
 });

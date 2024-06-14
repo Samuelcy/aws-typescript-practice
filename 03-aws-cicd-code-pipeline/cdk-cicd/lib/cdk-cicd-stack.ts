@@ -15,7 +15,7 @@ export class CdkCicdStack extends cdk.Stack {
           'npm ci',
           'npx cdk synth'
         ],
-        primaryOutputDirectory: 'cdk.out' 
+        primaryOutputDirectory: '03-aws-cicd-code-pipeline/cdk-cicd/cdk.out' 
       })
     });
   }
