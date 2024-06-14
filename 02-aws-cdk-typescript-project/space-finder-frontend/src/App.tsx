@@ -6,6 +6,7 @@ import LoginComponent from './components/LoginComponent';
 import { AuthService } from './services/AuthService';
 import { DataService } from './services/DataService';
 import CreateSpace from './components/spaces/CreateSpace';
+import Spaces from './components/spaces/Spaces';
 
 const authService = new AuthService();
 const dataService = new DataService(authService);
@@ -17,18 +18,18 @@ function App() {
     {
       element: (
         <>
-          <NavBar userName={userName}/>
+          <NavBar userName={userName} />
           <Outlet />
         </>
       ),
-      children:[
+      children: [
         {
           path: "/",
           element: <div>Hello world!</div>,
         },
         {
           path: "/login",
-          element: <LoginComponent authService={authService} setUserNameCb={setUserName}/>,
+          element: <LoginComponent authService={authService} setUserNameCb={setUserName} />,
         },
         {
           path: "/profile",
@@ -36,11 +37,11 @@ function App() {
         },
         {
           path: "/createSpace",
-          element: <CreateSpace dataService={dataService}/>,
+          element: <CreateSpace dataService={dataService} />,
         },
         {
           path: "/spaces",
-          element: <div>Spaces page </div>,
+          element: <Spaces dataService={dataService} />,
         },
       ]
     },
