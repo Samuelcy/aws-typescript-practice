@@ -8,7 +8,7 @@ Certificate no: X
 ## Notes / Projects
 * [AWS CDK and CloudFormation intro](https://github.com/Samuelcy/aws-typescript-practice/tree/main/01-aws-cdk-cloud-formation-intro/cdk-starter)
 * [Space Finder AWS CDK Project Front-End](https://github.com/Samuelcy/aws-typescript-practice/tree/main/02-aws-cdk-typescript-project/space-finder-frontend)
- - React Vite
+  - React Vite
 * [Space Finder AWS CDK Project Back-End](https://github.com/Samuelcy/aws-typescript-practice/tree/main/02-aws-cdk-typescript-project/space-finder)
   - AWS Lambda, DyanmoDB, AWS API, AWS Cognito 
 
