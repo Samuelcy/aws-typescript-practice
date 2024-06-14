@@ -11,6 +11,8 @@ Certificate no: X
   - Register an account to upload photos and have it saved to the AWS back-end: React + Vite
 * [Space Finder AWS CDK Project Back-End](https://github.com/Samuelcy/aws-typescript-practice/tree/main/02-aws-cdk-typescript-project/space-finder)
   - AWS Lambda, DyanmoDB, AWS API, AWS Cognito 
+* [CDK CICD](https://github.com/Samuelcy/aws-typescript-practice/tree/main/03-aws-cicd-code-pipeline/cdk-cicd)
+  - AWS CodePipeline
 
 ## Course Overview
 Learn to build and manage serverless projects using AWS and Typescript:
