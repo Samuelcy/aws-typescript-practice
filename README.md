@@ -3,7 +3,7 @@
 Welcome to my AWS & Typescript practice repository! This repository contains all the code I practiced from the comprehensive course on [AWS & Typescript Masterclass - CDK, Serverless, React
 ](https://www.udemy.com/course/aws-typescript-cdk-serverless-react) and other sources. 
 
-Certificate no: UC-e54a3316-2e40-44dd-b8c1-df292cde1f67
+Certificate no: UC-e54a3316-2e40-44dd-b8c1-df292cde1f67 (6/17)
 
 ## Notes / Projects
 * [AWS CDK and CloudFormation intro](https://github.com/Samuelcy/aws-typescript-practice/tree/main/01-aws-cdk-cloud-formation-intro/cdk-starter)
